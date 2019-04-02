@@ -38,7 +38,7 @@
 	-webkit-column-break-inside: avoid;
 	page-break-inside: avoid;
 	break-inside: avoid-column;
-	border:1px solid #222;
+	/*border:1px solid #222;*/
 }
 
 .og-grid li > a,
@@ -52,7 +52,7 @@
 .og-grid li > a img {
 	width:100%;
 	height:auto;
-	border: 1px solid #888;
+	/*border: 1px solid #888;*/
 }
 
 .og-grid li.og-expanded > a::after {
