@@ -4,21 +4,55 @@
 	margin: 0 auto;
 	text-align: center;
 	width: 100%;
+
+	-webkit-columns: 250px 3;
+	-moz-columns: 250px 3;
+	columns: 250px 3;
+	-webkit-column-gap: 15px;
+	-moz-column-gap: 15px;
+	column-gap: 15px;
+	max-width: 80vw;
+	margin: 0 auto;
+	display: block;
+	-moz-column-fill: balance;
+	column-fill: balance;
 }
 
 .og-grid li {
 	display: inline-block;
 	margin: 10px 5px 0 5px;
 	vertical-align: top;
-	height: 250px;
+	height: auto;
+
+	min-width: calc(100% - 4px);
+	margin: 10px;
+	background-color: white;
+	/*min-height: 40vh;*/
+	min-height: 28vh;
+	display: inline-block;
+	position: relative;
+	/*box-shadow: 0 1px 3px 0 rgba(0, 0, 0, .2), 0 1px 1px 0 rgba(0, 0, 0, .14), 0 2px 1px -1px rgba(0, 0, 0, .12);*/
+	padding: 20px;
+	box-sizing: border-box;
+	/*border-radius: 3px;*/
+	-webkit-column-break-inside: avoid;
+	page-break-inside: avoid;
+	break-inside: avoid-column;
+	border:1px solid #222;
 }
 
 .og-grid li > a,
 .og-grid li > a img {
-	border: none;
-	outline: none;
+	/*border: none;
+	outline: none;*/
 	display: block;
 	position: relative;
+}
+
+.og-grid li > a img {
+	width:100%;
+	height:auto;
+	border: 1px solid #888;
 }
 
 .og-grid li.og-expanded > a::after {
@@ -37,7 +71,7 @@
 
 .og-expander {
 	position: absolute;
-	background: #ddd;
+	background: #fff;
 	top: auto;
 	left: 0;
 	width: 100%;
@@ -45,6 +79,12 @@
 	text-align: left;
 	height: 0;
 	overflow: hidden;
+
+	height:100%;
+	position: fixed;
+	top:0;
+	margin:0;
+	z-index: 999;
 }
 
 .og-expander-inner {
