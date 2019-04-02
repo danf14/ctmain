@@ -366,7 +366,8 @@
 							}
 							this.$previewEl.css( 'height', 0 );
 							var $expandedItem = $items.eq( this.expandedIdx );
-							$expandedItem.css( 'height', $expandedItem.data( 'height' ) ).on( transEndEventName, onEndFn );
+							//$expandedItem.css( 'height', $expandedItem.data( 'height' ) ).on( transEndEventName, onEndFn );
+							//$expandedItem.css( 'height', $item.data( 'height' ) ).on( transEndEventName, onEndFn );
 
 							if( !support ) {
 								onEndFn.call();
@@ -377,7 +378,7 @@
 						return false;
 
 					},
-					calcHeight : function() {
+					/*calcHeight : function() {
 
 						var heightPreview = winsize.height - this.$item.data( 'height' ) - marginExpanded,
 							itemHeight = winsize.height;
@@ -390,7 +391,7 @@
 						this.height = heightPreview;
 						this.itemHeight = itemHeight;
 
-					},
+					},*/
 					setHeights : function() {
 
 						var self = this,
@@ -401,9 +402,9 @@
 								self.$item.addClass( 'og-expanded' );
 							};
 
-						this.calcHeight();
-						this.$previewEl.css( 'height', this.height );
-						this.$item.css( 'height', this.itemHeight ).on( transEndEventName, onEndFn );
+						//this.calcHeight();
+						//this.$previewEl.css( 'height', this.height );
+						//this.$item.css( 'height', this.itemHeight ).on( transEndEventName, onEndFn );
 
 						if( !support ) {
 							onEndFn.call();
@@ -416,7 +417,7 @@
 							previewOffsetT = this.$previewEl.offset().top - scrollExtra,
 							scrollVal = this.height + this.$item.data( 'height' ) + marginExpanded <= winsize.height ? position : this.height < winsize.height ? previewOffsetT - ( winsize.height - this.height ) : previewOffsetT;
 						
-						$body.animate( { scrollTop : scrollVal }, settings.speed );
+						//$body.animate( { scrollTop : scrollVal }, settings.speed );
 
 					},
 					setTransition  : function() {
