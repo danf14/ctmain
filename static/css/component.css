@@ -249,16 +249,27 @@ body {
 	.og-details { float: none; width: 100%; }*/
 	.og-expander-inner{
 		padding: 70px 30px 50px;
-		height: auto;
+		/*height: auto;
 		display: flex;
-		flex-direction: column;
+		flex-direction: column;*/
+	}
+
+	.og-fullimg,
+	.og-details {
+		position: absolute;
+		left: 0;
 	}
 	.og-fullimg { 
 		width: 100%;
-		padding:0;
+		/*padding:0;*/
+		top: 9%;
+		height: 50%;
+		padding: 0 20px;
 	}
 	.og-details { 
 		width: 100%; 
+		top: 56%;
+		padding: 0 30px;
 	}
 	
 }
@@ -270,6 +281,14 @@ body {
 		font-size: 10vw !important;
 	}
 	
+	.og-details p {
+		margin-top: 30px;
+	}
+
+	.og-details a {
+		margin-top: 50px;
+	}
+	
 }
 
 @media screen and (max-width: 373px) {
@@ -277,6 +296,14 @@ body {
 	h1 {
 		text-align: center;
 		font-size: 9vw !important;
+	}
+
+	.og-details p {
+		margin-top: 10px;
+	}
+
+	.og-details a {
+		margin-top: 20px;
 	}
 	
 }
