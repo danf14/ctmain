@@ -271,8 +271,9 @@
 					create : function() {
 						this.$title = $( '<h3></h3>' );
 						this.$description = $( '<p></p>' );
+						this.$dimensions = $( '<p></p>' );
 						this.$href = $( '<a href="#" target="_blank">{{ .Site.Params.buttontext }}</a>' );
-						this.$details = $( '<div class="og-details"></div>' ).append( this.$title, this.$description, this.$href );
+						this.$details = $( '<div class="og-details"></div>' ).append( this.$title, this.$description, this.$dimensions, this.$href );
 						this.$loading = $( '<div class="og-loading"></div>' );
 						this.$fullimage = $( '<div class="og-fullimg"></div>' ).append( this.$loading );
 						this.$closePreview = $( '<span class="og-close"></span>' );
@@ -304,11 +305,13 @@
 								largesrc : $itemEl.data( 'largesrc' ),
 								title : $itemEl.data( 'title' ),
 								description : $itemEl.data( 'description' ),
+								dimensions : $itemEl.data( 'dimensions' ),
 								buttontext : $itemEl.data( 'buttontext' )
 							};
 
 						this.$title.html( eldata.title );
 						this.$description.html( eldata.description );
+						this.$dimensions.html( eldata.dimensions );
 						if(eldata.buttontext) this.$href.text(eldata.buttontext);
 						else this.$href.text("{{ .Site.Params.buttontext }}")
 
