@@ -95,7 +95,6 @@ body {
 .og-expander-inner {
 	padding: 50px 30px;
 	height: 100%;
-	height: auto;
 }
 
 .og-close {
@@ -250,7 +249,7 @@ body {
 	.og-details { float: none; width: 100%; }*/
 	.og-expander-inner{
 		padding: 70px 30px 50px;
-		/*height: auto;*/
+		height: auto;
 		display: flex;
 		flex-direction: column;
 	}
