@@ -201,7 +201,7 @@ body {
 	border-color: #999;
 	color: #999;
 }
-
+/*
 .og-loading {
 	width: 20px;
 	height: 20px;
@@ -233,6 +233,17 @@ body {
 	0% { background: #ddd; }
 	33% { background: #ccc; box-shadow: 0 0 1px #ccc, 15px 30px 1px #ccc, -15px 30px 1px #ddd; }
 	66% { background: #ccc; box-shadow: 0 0 1px #ccc, 15px 30px 1px #ddd, -15px 30px 1px #ccc; }
+}
+*/
+
+.og-loading {
+	width: 145px;
+	height: 145px;
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translate( -50%, -50%);
+	background: url(../images/kingSmall1.gif) no-repeat;
 }
 
 @media screen and (max-width: 830px) {
