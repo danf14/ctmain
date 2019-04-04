@@ -13,9 +13,9 @@ body {
 	-webkit-columns: 250px 3;
 	-moz-columns: 250px 3;
 	columns: 250px 3;
-	-webkit-column-gap: 15px;
-	-moz-column-gap: 15px;
-	column-gap: 15px;
+	-webkit-column-gap: 5%;
+	-moz-column-gap: 5%;
+	column-gap: 5%;
 	max-width: 80vw;
 	margin: 0 auto;
 	display: block;
