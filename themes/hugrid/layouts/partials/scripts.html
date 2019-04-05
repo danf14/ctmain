@@ -1,6 +1,12 @@
 		<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
 		<script src="{{ .Site.BaseURL }}js/jquery.lazy.min.js"></script>
-
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-mousewheel/3.1.13/jquery.mousewheel.min.js"></script>
+		<script src="{{ .Site.BaseURL }}js/lightgallery.min.js"></script>
+		<script src="{{ .Site.BaseURL }}js/lg-fullscreen.min.js"></script>
+		<script src="{{ .Site.BaseURL }}js/lg-hash.min.js"></script>
+		<script src="{{ .Site.BaseURL }}js/lg-share.min.js"></script>
+		<script src="{{ .Site.BaseURL }}js/lg-thumbnail.min.js"></script>
+		<script src="{{ .Site.BaseURL }}js/lg-zoom.min.js"></script>
 		<script>
 			var $event = $.event,
 			$special,
@@ -268,7 +274,7 @@
 				}
 
 				Preview.prototype = {
-					create : function() {
+					/*create : function() {
 						this.$title = $( '<h3></h3>' );
 						this.$description = $( '<p></p>' );
 						this.$dimensions = $( '<p></p>' );
@@ -276,6 +282,23 @@
 						this.$details = $( '<div class="og-details"></div>' ).append( this.$title, this.$description, this.$dimensions, this.$href );
 						this.$loading = $( '<div class="og-loading"></div>' );
 						this.$fullimage = $( '<div class="og-fullimg"></div>' ).append( this.$loading );
+						this.$closePreview = $( '<span class="og-close"></span>' );
+						this.$previewInner = $( '<div class="og-expander-inner"></div>' ).append( this.$closePreview, this.$fullimage, this.$details );
+						this.$previewEl = $( '<div class="og-expander"></div>' ).append( this.$previewInner );
+						this.$item.append( this.getEl() );
+						if( support ) {
+							this.setTransition();
+						}
+					},*/
+					create : function() {
+						this.$title = $( '<h3></h3>' );
+						this.$description = $( '<p></p>' );
+						this.$dimensions = $( '<p></p>' );
+						this.$href = $( '<a href="#" target="_blank">{{ .Site.Params.buttontext }}</a>' );
+						this.$details = $( '<div class="og-details"></div>' ).append( this.$title, this.$description, this.$dimensions, this.$href,this.$gallery );
+						this.$loading = $( '<div class="og-loading"></div>' );
+						this.$lightGalleryLink = $( '<a href="large-image.jpg"></a>' );
+						this.$fullimage = $( '<div class="og-fullimg"></div>' ).append( this.$loading, this.$lightGalleryLink );
 						this.$closePreview = $( '<span class="og-close"></span>' );
 						this.$previewInner = $( '<div class="og-expander-inner"></div>' ).append( this.$closePreview, this.$fullimage, this.$details );
 						this.$previewEl = $( '<div class="og-expander"></div>' ).append( this.$previewInner );
@@ -333,11 +356,100 @@
 							this.$loading.show();
 							$( '<img/>' ).load( function() {
 								var $img = $( this );
+									//self.$lightGalleryLink.addClass('picture');
 								if( $img.attr( 'src' ) === self.$item.children('a').data( 'largesrc' ) ) {
+									/*self.$loading.hide();
+									self.$fullimage.find( 'img' ).remove();
+									self.$largeImg = $img.fadeIn( 350 );
+									self.$fullimage.append( self.$largeImg );*/
 									self.$loading.hide();
 									self.$fullimage.find( 'img' ).remove();
 									self.$largeImg = $img.fadeIn( 350 );
-									self.$fullimage.append( self.$largeImg );
+									self.$lightGalleryLink.attr( 'href', eldata.largesrc );
+									self.$lightGalleryLink.attr( 'data-size', eldata.size ).append( self.$largeImg );
+									self.$lightGalleryLink.click(function(e){e.preventDefault();})
+									self.$lightGalleryLink.on('click', function() {
+										console.log('lg hit');
+										$(this).lightGallery({
+											index: current,
+											hideBarsDelay:3000,
+											dynamic: true,
+											dynamicEl: [{
+												'src': 'images/med/CTMAIN-51743.jpg',
+												'thumb': 'images/thumbs/CTMAIN-51743.jpg',
+												'subHtml': '<h4>Title, Year</h4><p>C-type gloss print on aluminium, framed in a walnut tray frame.</p><p>180 x 120cm, Edition 1 of 2 & 2 AP</p>'
+											}, {
+												'src': 'images/med/CTMAIN-51751.jpg',
+												'thumb': 'images/thumbs/CTMAIN-51751.jpg',
+												'subHtml': '<h4>Title, Year</h4><p>C-type gloss print on aluminium, framed in a walnut tray frame.</p><p>180 x 120cm, Edition 1 of 2 & 2 AP</p>'
+											}, {
+												'src': 'images/med/CTMAIN-51758.jpg',
+												'thumb': 'images/thumbs/CTMAIN-51758.jpg',
+												'subHtml': '<h4>Title, Year</h4><p>C-type gloss print on aluminium, framed in a walnut tray frame.</p><p>180 x 120cm, Edition 1 of 2 & 2 AP</p>'
+											}, {
+												'src': 'images/med/CTMAIN-51773.jpg',
+												'thumb': 'images/thumbs/CTMAIN-51773.jpg',
+												'subHtml': '<h4>Title, Year</h4><p>C-type gloss print on aluminium, framed in a walnut tray frame.</p><p>180 x 120cm, Edition 1 of 2 & 2 AP</p>'
+											}, {
+												'src': 'images/med/CTMAIN-51776.jpg',
+												'thumb': 'images/thumbs/CTMAIN-51776.jpg',
+												'subHtml': '<h4>Title, Year</h4><p>C-type gloss print on aluminium, framed in a walnut tray frame.</p><p>180 x 120cm, Edition 1 of 2 & 2 AP</p>'
+											}, {
+												'src': 'images/med/CTMAIN-51782.jpg',
+												'thumb': 'images/thumbs/CTMAIN-51782.jpg',
+												'subHtml': '<h4>Title, Year</h4><p>C-type gloss print on aluminium, framed in a walnut tray frame.</p><p>180 x 120cm, Edition 1 of 2 & 2 AP</p>'
+											}, {
+												'src': 'images/med/CTMAIN-51787.jpg',
+												'thumb': 'images/thumbs/CTMAIN-51787.jpg',
+												'subHtml': '<h4>Title, Year</h4><p>C-type gloss print on aluminium, framed in a walnut tray frame.</p><p>180 x 120cm, Edition 1 of 2 & 2 AP</p>'
+											}, {
+												'src': 'images/med/CTMAIN-51792.jpg',
+												'thumb': 'images/thumbs/CTMAIN-51792.jpg',
+												'subHtml': '<h4>Title, Year</h4><p>C-type gloss print on aluminium, framed in a walnut tray frame.</p><p>180 x 120cm, Edition 1 of 2 & 2 AP</p>'
+											}, {
+												'src': 'images/med/CTMAIN-51799.jpg',
+												'thumb': 'images/thumbs/CTMAIN-51799.jpg',
+												'subHtml': '<h4>Title, Year</h4><p>C-type gloss print on aluminium, framed in a walnut tray frame.</p><p>180 x 120cm, Edition 1 of 2 & 2 AP</p>'
+											}, {
+												'src': 'images/med/CTMAIN-51801.jpg',
+												'thumb': 'images/thumbs/CTMAIN-51801.jpg',
+												'subHtml': '<h4>Title, Year</h4><p>C-type gloss print on aluminium, framed in a walnut tray frame.</p><p>180 x 120cm, Edition 1 of 2 & 2 AP</p>'
+											}, {
+												'src': 'images/med/CTMAIN-51807.jpg',
+												'thumb': 'images/thumbs/CTMAIN-51807.jpg',
+												'subHtml': '<h4>Title, Year</h4><p>C-type gloss print on aluminium, framed in a walnut tray frame.</p><p>180 x 120cm, Edition 1 of 2 & 2 AP</p>'
+											}, {
+												'src': 'images/med/CTMAIN-51809.jpg',
+												'thumb': 'images/thumbs/CTMAIN-51809.jpg',
+												'subHtml': '<h4>Title, Year</h4><p>C-type gloss print on aluminium, framed in a walnut tray frame.</p><p>180 x 120cm, Edition 1 of 2 & 2 AP</p>'
+											}, {
+												'src': 'images/med/CTMAIN-51812.jpg',
+												'thumb': 'images/thumbs/CTMAIN-51812.jpg',
+												'subHtml': '<h4>Title, Year</h4><p>C-type gloss print on aluminium, framed in a walnut tray frame.</p><p>180 x 120cm, Edition 1 of 2 & 2 AP</p>'
+											}, {
+												'src': 'images/med/CTMAIN-51825.jpg',
+												'thumb': 'images/thumbs/CTMAIN-51825.jpg',
+												'subHtml': '<h4>Title, Year</h4><p>C-type gloss print on aluminium, framed in a walnut tray frame.</p><p>180 x 120cm, Edition 1 of 2 & 2 AP</p>'
+											}, {
+												'src': 'images/med/CTMAIN-51831.jpg',
+												'thumb': 'images/thumbs/CTMAIN-51831.jpg',
+												'subHtml': '<h4>Title, Year</h4><p>C-type gloss print on aluminium, framed in a walnut tray frame.</p><p>180 x 120cm, Edition 1 of 2 & 2 AP</p>'
+											}, {
+												'src': 'images/med/CTMAIN-51836.jpg',
+												'thumb': 'images/thumbs/CTMAIN-51836.jpg',
+												'subHtml': '<h4>Title, Year</h4><p>C-type gloss print on aluminium, framed in a walnut tray frame.</p><p>180 x 120cm, Edition 1 of 2 & 2 AP</p>'
+											}, {
+												'src': 'images/med/CTMAIN-51839.jpg',
+												'thumb': 'images/thumbs/CTMAIN-51839.jpg',
+												'subHtml': '<h4>Title, Year</h4><p>C-type gloss print on aluminium, framed in a walnut tray frame.</p><p>180 x 120cm, Edition 1 of 2 & 2 AP</p>'
+											}, {
+												'src': 'images/med/CTMAIN-51865.jpg',
+												'thumb': 'images/thumbs/CTMAIN-51865.jpg',
+												'subHtml': '<h4>Title, Year</h4><p>C-type gloss print on aluminium, framed in a walnut tray frame.</p><p>180 x 120cm, Edition 1 of 2 & 2 AP</p>'
+											}]
+										})
+										
+									});
 								}
 							} ).attr( 'src', eldata.largesrc );	
 						}
@@ -438,14 +550,13 @@
 				};
 
 			})();
-		</script>
-		<script>
+
 			$(function() {
 				Grid.init();
 				$('.lazy').lazy({
 					effect: "fadeIn",
 					effectTime: 800,
 					threshold: 1
-				});/**/
+				});
 			});
 		</script>
