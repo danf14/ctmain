@@ -237,13 +237,13 @@ body {
 */
 
 .og-loading {
-	width: 145px;
-	height: 145px;
+	width: 196px;
+	height: 154px;
 	position: absolute;
 	top: 50%;
 	left: 50%;
 	transform: translate( -50%, -50%);
-	background: url(../images/kingSmall1.gif) no-repeat;
+	background: url(../images/evolution2.gif) no-repeat;
 }
 
 @media screen and (max-width: 830px) {
