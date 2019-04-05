@@ -266,8 +266,8 @@ body:not(.lg-from-hash) .lg-outer.lg-start-zoom .lg-item.lg-complete .lg-object 
 }
 
 .lg-thumb-outer {
-  overflow-x: scroll;
-  -webkit-overflow-scrolling: touch;
+  /*overflow-x: scroll;
+  -webkit-overflow-scrolling: touch;*/
 }
 
 .lg-outer .lg-thumb-outer {
