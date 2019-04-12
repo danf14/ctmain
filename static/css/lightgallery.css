@@ -5,6 +5,13 @@
   font-weight: normal;
   font-style: normal;
 }
+@font-face {
+  font-family: 'upDown';
+  src: url("../fonts/upDown.eot");
+  src: url("../fonts/upDown.eot?#iefix") format("embedded-opentype"), url("../fonts/upDown.woff") format("woff"), url("../fonts/upDown.ttf") format("truetype"), url("../fonts/upDown.svg#lg") format("svg");
+  font-weight: normal;
+  font-style: normal;
+}
 .lg-icon {
   font-family: 'lg';
   speak: none;
@@ -33,6 +40,7 @@
   border: none;
   outline: none;
 }
+
 .lg-actions .lg-next.disabled, .lg-actions .lg-prev.disabled {
   pointer-events: none;
   opacity: 0.5;
@@ -365,9 +373,13 @@ body:not(.lg-from-hash) .lg-outer.lg-start-zoom .lg-item.lg-complete .lg-object 
   text-align: center;
   top: -39px;
   width: 50px;
+  font-family: 'upDown';
 }
 .lg-outer .lg-toogle-thumb:after {
-  content: "\e1ff";
+  content: "\0041";
+}
+.lg-outer.lg-thumb-open .lg-toogle-thumb:after {
+  content: "\0042";
 }
 .lg-outer .lg-toogle-thumb:hover {
   color: #333;
@@ -986,3 +998,13 @@ body:not(.lg-from-hash) .lg-outer.lg-start-zoom .lg-item.lg-complete .lg-object 
 }
 
 /*# sourceMappingURL=lightgallery.css.map */
+
+
+@media screen and (max-width: 600px) {
+
+  .lg-actions .lg-next,
+  .lg-actions .lg-prev{
+    display: none;
+  }
+	
+}
