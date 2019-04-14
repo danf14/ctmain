@@ -1,13 +1,8 @@
-body { 
-	font-family: 'Geomanist';
-	font-weight: 100;
-}
-
 .og-grid {
 	list-style: none;
 	padding: 20px 0;
 	margin: 0 auto;
-	text-align: center;
+	/*text-align: center;*/
 	width: 100%;
 
 	-webkit-columns: 250px 3;
@@ -21,6 +16,16 @@ body {
 	display: block;
 	-moz-column-fill: balance;
 	column-fill: balance;
+	/*padding-top:168px;*/
+}
+
+article.og-grid {
+	padding: 60px 37px 50px;
+}
+
+.og-grid p {
+	margin-bottom:50px;
+	/*text-align: justify;*/
 }
 
 .og-grid li {
@@ -89,7 +94,7 @@ body {
 	position: fixed;
 	top:0;
 	margin:0;
-	z-index: 999;
+	z-index: 1051;
 }
 
 .og-expander-inner {

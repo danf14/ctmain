@@ -1,9 +1,23 @@
 @import url(//fonts.googleapis.com/css?family=Lato:300,400,700);
 /* General Demo Style */
 
-html { height: 100%; }
+html { 
+	height: 100%;
+    width: 100%;
+   /* overflow: hidden;*/
+ }
 
-body { background: #fff; }
+body { 
+	width: 100%;
+    height: 100%;
+    /*overflow-y: scroll;
+    padding-right: 17px;
+    box-sizing: content-box;*/
+	background: #fff; 
+}
+
+::-moz-selection { color:#fff; background: #888; }
+::selection { color:#fff; background: #888; }
 
 *,
 *:after,
@@ -31,11 +45,12 @@ body { background: #fff; }
 }
 
 body {
-	/*font-family: 'Lato', Calibri, Arial, sans-serif;
-	font-weight: 300;*/
+	/*font-family: 'Lato', Calibri, Arial, sans-serif;*/
+	font-weight: 400;
 	font-family: 'Geomanist';
-    font-size: 15px;
-    color: #333;
+	font-size: 16px;
+	letter-spacing: 1px;
+    color: #888;
     overflow: scroll;
     overflow-x: hidden;
 }
@@ -47,34 +62,70 @@ a {
 
 .container {
 	width: 100%;
+	max-width: 80vw;
+	min-height: 100vh;
+	margin:0 auto;
+	/*border-bottom: 1px solid #dcdcdc;*/
 	position: relative;
+	transition: ease 500ms all;
 }
 
 .container > header {
-	width: 90%;
-	max-width: 1240px;
+	/*width: 90%;
+	max-width: 1240px;*/
 	margin: 0 auto;
 	position: relative;
 	padding: 0 30px 50px 30px;
 
-	max-width: 80vw;
-}
+	/*max-width: 80vw;*/
 
-.container > header {
 	padding: 60px 37px 50px;
 	/*text-align: center;*/
 }
 
 .container > header h1 {
 	font-size: 34px;
-	font-size: 5vh;
+	font-size: 4vh;
 	line-height: 38px;
 	margin: 0 auto;
 	font-weight: 700;
 	font-weight: 300;
+	letter-spacing: 3px;
+	color: #333;
+	position: relative;
+	display: inline;
+    z-index: 10;
+}
+
+#works.container > header {
+	width:80vw;
+	/*position:fixed;*/
+	padding: 60px 37px 50px;
+	background: #fff;
+	z-index: 10;
+	transition: ease 500ms all;
+}
+
+#works.container > header.scrolled {
+	width:80vw;
+
+	/*padding: 0 37px;*/
+	background: #fff;
+	z-index: 10;
+}
+
+#works.container > header h1 {
+	display: inline-block;
+	opacity: 1;
+	font-size: 5vh;
 	text-transform: uppercase;
 	letter-spacing: 10px;
-	color: #333;
+	transition: ease 500ms all;
+}
+
+#works.container > header.scrolled h1 {
+	/*opacity: 0;
+	font-size: 3vh;*/
 }
 
 .container > header h1 span {

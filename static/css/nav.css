@@ -1,0 +1,130 @@
+.nav-container {  
+    width:80vw;
+    display:block;
+    position: fixed;
+    top:0;
+	padding: 60px 37px 50px;
+	z-index: 10;
+    transition: ease 250ms all;
+    /*transition: ease 10ms background;
+    border-bottom:1px solid #dcdcdc;*/
+}
+
+
+.scrolled {
+    background: #fff;
+    padding: 20px 37px 40px;
+}
+
+.scrolled .nav-list{top:20px;}
+
+.restore {
+    padding: 60px 37px 50px;
+   /* border-bottom:1px solid #dcdcdc;*/
+}
+
+.restore .nav-list{top:80px;}
+ 
+.nav-list {
+    float: right;
+    list-style-type: none;
+    position: absolute;
+    top:80px;
+    right:10px;
+    z-index: 10;
+    transition: ease 250ms all;
+}
+
+.nav-item {
+    float: left;
+    margin-right:30px;
+    transition: ease 500ms all;
+}
+
+#slider{
+    width:250px;
+    background: #fff;
+    display:none;
+}
+
+#slider .nav-container {
+    width:auto;
+}
+
+#slider .nav-list {
+    right:auto;
+}
+
+#slider .nav-container .nav-item{  
+    margin-bottom: 25px;
+}
+
+  
+  #trigger {
+    width: 32px;
+    height: 16px;
+    position: fixed;
+    top: 30px;
+    right: 20px;
+    display: none;
+    z-index: 1050;
+  }
+  #trigger .line {
+    display: block;
+    background: #555;
+    width: 32px;
+    height: 2px;
+    position: absolute;
+    left: 0;
+    border-radius: 1px;
+    transition: all 0.4s;
+    -webkit-transition: all 0.4s;
+    -moz-transition: all 0.4s;
+  }
+  #trigger .line.line-1 {
+    top: 0;
+  }
+  #trigger .line.line-2 {
+    top: 50%;
+  }
+  #trigger .line.line-3 {
+    top: 100%;
+  }
+  /*
+  #trigger:hover .line-1, #trigger:focus .line-1 {
+    transform: translateY(-2px);
+    -webkit-transform: translateY(-2px);
+    -moz-transform: translateY(-2px);
+  }
+  #trigger:hover .line-3, #trigger:focus .line-3 {
+    transform: translateY(2px);
+    -webkit-transform: translateY(2px);
+    -moz-transform: translateY(2px);
+  }*/
+  #trigger.active .line-1 {
+    transform: translateY(8px) translateX(0) rotate(45deg);
+    -webkit-transform: translateY(8px) translateX(0) rotate(45deg);
+    -moz-transform: translateY(8px) translateX(0) rotate(45deg);
+  }
+  #trigger.active .line-2 {
+    opacity: 0;
+  }
+  #trigger.active .line-3 {
+    transform: translateY(-8px) translateX(0) rotate(-45deg);
+    -webkit-transform: translateY(-8px) translateX(0) rotate(-45deg);
+    -moz-transform: translateY(-8px) translateX(0) rotate(-45deg);
+  }
+  
+
+
+  
+@media screen and (max-width:767px) {
+    .nav-container {  
+        display:none;
+    }
+    #slider .nav-container,
+    #trigger {  
+        display:block;
+    }
+    
+}
