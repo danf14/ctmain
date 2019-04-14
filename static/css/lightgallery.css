@@ -787,7 +787,7 @@ body:not(.lg-from-hash) .lg-outer.lg-start-zoom .lg-item.lg-complete .lg-object 
   position: fixed;
   top: 0;
   left: 0;
-  z-index: 1050;
+  z-index: 1053;
   text-align: left;
   opacity: 0;
   -webkit-transition: opacity 0.15s ease 0s;
@@ -915,7 +915,7 @@ body:not(.lg-from-hash) .lg-outer.lg-start-zoom .lg-item.lg-complete .lg-object 
   left: 0;
   right: 0;
   bottom: 0;
-  z-index: 1040;
+  z-index: 1052;
   background-color: #fff;
   opacity: 0;
   -webkit-transition: opacity 0.15s ease 0s;
@@ -1001,7 +1001,7 @@ body:not(.lg-from-hash) .lg-outer.lg-start-zoom .lg-item.lg-complete .lg-object 
 /*# sourceMappingURL=lightgallery.css.map */
 
 
-@media screen and (max-width: 600px) {
+@media screen and (max-width: 800px) {
 
   .lg-actions .lg-next,
   .lg-actions .lg-prev{
