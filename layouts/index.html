@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="{{ with .Site.LanguageCode }}{{ . }}{{ else }}en-US{{ end }}">
+
+<head>
+	{{ partial "head.html" . }}
+	{{ template "_internal/google_analytics.html" . }}
+</head>
+
+<body>
+	<div id="works" class="container">
+		{{ partial "header.html" . }}
+		{{.Content}}
+		<div class="main">
+			<ul id="og-grid" class="og-grid">
+				{{ range $.Site.Data.items.items }}
+				<li>
+					<a href="{{.url}}" data-largesrc="{{.image}}" data-title="{{.title}}" data-description="{{.description }}"
+					 data-dimensions="{{.dimensions }}" data-buttontext="{{.buttontext}}">
+						<img class="lazy" src="{{.thumb}}" data-retina="{{.retinaThumb}}" alt="{{.alt}}" />
+					</a>
+				</li>
+				{{ end }}
+			</ul>
+
+			{{ partial "footer.html" . }}
+		</div>
+	</div>
+	<div id="about" class="container">
+		<header class="clearfix">
+			<h1>About</h1>
+		</header>
+		{{ range $.Site.Data.items.about }}
+		<article class="og-grid">
+			<p>
+				Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna
+				aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+				Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur
+				sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+			</p>
+			<p>
+				Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna
+				aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+				Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur
+				sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+			</p>
+			<p>
+				Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna
+				aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+				Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur
+				sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+			</p>
+		</article>
+		
+		{{ end }}
+	</div>
+	<div id="contact" class="container">
+		<header class="clearfix">
+			<h1>Contact</h1>
+		</header>
+		<article class="og-grid">
+			<p>
+				All enquiries: <a href="mailto:info@catraisonne.com">info@catraisonne.com</a>
+			</p>
+		</article>
+		
+	</div>
+	{{ partial "navSlider.html" . }}
+	{{ partial "scripts.html" . }}
+</body>
+
+</html>
