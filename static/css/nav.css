@@ -49,14 +49,17 @@
 
 #slider .nav-container {
     width:auto;
+    z-index: 1049;
 }
 
 #slider .nav-list {
     right:auto;
+    z-index: 1049;
 }
 
 #slider .nav-container .nav-item{  
     margin-bottom: 25px;
+    z-index: 1049;
 }
 
   
