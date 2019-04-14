@@ -52,17 +52,17 @@
 
 #slider .navSlider-container {
     width:auto;
-    z-index: 1049;
+    z-index: 9999;
 }
 
 #slider .navSlider-list {
     right:auto;
-    z-index: 1049;
+    z-index: 9999;
 }
 
 #slider .navSlider-container .navSlider-item{  
     margin-bottom: 25px;
-    z-index: 1049;
+    z-index: 9999;
 }
 
   
