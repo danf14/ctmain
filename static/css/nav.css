@@ -49,7 +49,7 @@
 
 #slider .navSlider-container {
     width:auto;
-    margin:80px 30px;
+    margin:100px 56px;
     z-index: 9999;
 }
 
@@ -60,10 +60,15 @@
 }
 
 #slider .navSlider-container .navSlider-item{  
-    margin-bottom: 25px;
     z-index: 9999;
 }
 
+#slider .navSlider-container .navSlider-item a{ 
+    width: 100%;
+    display: block;
+    padding:15px 0;
+    font-size: 18px;
+}
   
   #trigger {
     width: 32px;
