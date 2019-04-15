@@ -1,5 +1,4 @@
-.nav-container,
-.navSlider-container {  
+.nav-container {  
     width:80vw;
     display:block;
     position: fixed;
@@ -26,8 +25,7 @@
 
 .restore .nav-list{top:80px;}
  
-.nav-list,
-.navSlider-list {
+.nav-list {
     float: right;
     list-style-type: none;
     position: absolute;
@@ -37,8 +35,7 @@
     transition: ease 250ms all;
 }
 
-.nav-item,
-.navSlider-item {
+.nav-item {
     float: left;
     margin-right:30px;
     transition: ease 500ms all;
@@ -57,6 +54,7 @@
 
 #slider .navSlider-list {
     right:auto;
+    list-style-type: none;
     z-index: 9999;
 }
 
