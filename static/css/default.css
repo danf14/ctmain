@@ -115,7 +115,7 @@ a {
 }
 
 #works.container > header h1 {
-	display: inline-block;
+	display: block;
 	opacity: 1;
 	font-size: 5vh;
 	text-transform: uppercase;
