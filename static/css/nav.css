@@ -120,7 +120,41 @@
     -moz-transform: translateY(-8px) translateX(0) rotate(-45deg);
   }
   
+.closeIcon {
+    width: 32px;
+    height: 16px;
+    position: absolute;
+    top: 30px;
+    right: 20px;
+    z-index: 1050;
+    cursor: pointer;
+}
 
+.closeIcon:before,
+.closeIcon:after {
+    content: "";
+    display: block;
+    background: #555;
+    width: 32px;
+    height: 2px;
+    position: absolute;
+    left: 0;
+    border-radius: 1px;
+}
+
+.closeIcon:before {
+    top: 0;
+    transform: translateY(8px) translateX(0) rotate(45deg);
+    -webkit-transform: translateY(8px) translateX(0) rotate(45deg);
+    -moz-transform: translateY(8px) translateX(0) rotate(45deg);
+}
+
+.closeIcon:after {
+    top: 100%;
+    transform: translateY(-8px) translateX(0) rotate(-45deg);
+    -webkit-transform: translateY(-8px) translateX(0) rotate(-45deg);
+    -moz-transform: translateY(-8px) translateX(0) rotate(-45deg);
+}
 
   
 @media screen and (max-width:767px) {
