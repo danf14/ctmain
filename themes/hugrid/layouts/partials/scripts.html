@@ -384,7 +384,7 @@
 							self.$lightGalleryLink.attr('data-size', eldata.size).append(self.$largeImg);
 							self.$lightGalleryLink.click(function (e) { e.preventDefault(); })
 							self.$lightGalleryLink.on('click', function () {
-								console.log('lg hit');
+
 								$(this).lightGallery({
 									index: current,
 									hideBarsDelay: 3000,
@@ -612,7 +612,7 @@
 			hamburger.toggleClass('active');
 			return false;
 		});
-		$('#slider').css('display', 'block')
+		$('#slider').css('display', 'block');
 	});
 
 </script>
