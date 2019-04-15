@@ -196,14 +196,17 @@ display: inline-block;
 
 .lg-toolbar {
   z-index: 1082;
-  left: 0;
   position: absolute;
-  top: 0;
+  /*right: 10px;
+  padding-left: 10px;
+  top: 16px;*/
   width: 100%;
+  padding: 16px 10px 0;
   /*background-color: rgba(0, 0, 0, 0.45);*/
+  background-color: rgba(255, 255, 255, 0.6);
 }
 .lg-toolbar .lg-icon {
-  color: #888;
+  color: #555;
   cursor: pointer;
   float: right;
   font-size: 24px;
