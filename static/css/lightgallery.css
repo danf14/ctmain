@@ -1046,9 +1046,12 @@ body:not(.lg-from-hash) .lg-outer.lg-start-zoom .lg-item.lg-complete .lg-object 
 
 #lg-zoom-in,
 #lg-zoom-out {
-  display: none;
+  /*display: none;*/
 }
 
+#lg-actual-size {
+  display: none;
+}
 
 @media screen and (max-width: 800px) {
 
