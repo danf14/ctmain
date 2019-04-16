@@ -83,8 +83,13 @@ a {
 	/*border-bottom: 1px solid #dcdcdc;*/
 	position: relative;
 	transition: ease 500ms all;
+	padding-top: 60px;
 }
-
+/*
+#works.container {
+	padding-top: 60px;
+}
+*/
 .container > header {
 	/*width: 90%;
 	max-width: 1240px;*/

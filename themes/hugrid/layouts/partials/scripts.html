@@ -577,12 +577,12 @@
 			threshold: 1
 		});
 
-		window.scrollTo(0,1);
+		//window.scrollTo(0,1);
 		$(window).scroll(function () {
 			var $height = $(window).scrollTop();
 			var $worksHeight = $('#works').height();
 
-			if ($height > 0 && $(window).width() > 767) {
+			if ($height > 80 && $(window).width() > 767) {
 				$('.nav-container').addClass('scrolled');
 				//$('#slider .nav-container').removeClass('scrolled');
 			} else {

@@ -3,7 +3,7 @@
     display:block;
     position: fixed;
     top:0;
-	padding: 60px 37px 50px;
+	padding: 120px 37px 50px;
 	z-index: 10;
     transition: ease 250ms all;
     /*transition: ease 10ms background;
@@ -23,13 +23,13 @@
    /* border-bottom:1px solid #dcdcdc;*/
 }
 
-.restore .nav-list{top:80px;}
+.restore .nav-list{top:140px;}
  
 .nav-list {
     float: right;
     list-style-type: none;
     position: absolute;
-    top:80px;
+    top:140px;
     right:10px;
     z-index: 10;
     transition: ease 250ms all;
