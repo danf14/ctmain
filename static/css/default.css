@@ -1,5 +1,16 @@
 @import url(//fonts.googleapis.com/css?family=Lato:300,400,700);
 /* General Demo Style */
+html,
+body {
+	/* Allows content to fill the viewport and go beyond the bottom */
+	height: 100%;
+	
+	/* Allows you to scroll below the viewport; default value is visible */
+	overflow-y: scroll;
+	
+	/* To smooth any scrolling behavior */
+	-webkit-overflow-scrolling: touch;
+}
 
 html { 
 	height: 100%;
