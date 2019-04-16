@@ -759,7 +759,8 @@ body:not(.lg-from-hash) .lg-outer.lg-start-zoom .lg-item.lg-complete .lg-object 
   display: block;
   white-space: pre;
   padding: 4px 12px;
-  font-family: "Open Sans","Helvetica Neue",Helvetica,Arial,sans-serif;
+  /*font-family: "Open Sans","Helvetica Neue",Helvetica,Arial,sans-serif;*/
+  font-family: 'Geomanist';
   font-size: 12px;
 }
 
