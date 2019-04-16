@@ -1045,15 +1045,6 @@ body:not(.lg-from-hash) .lg-outer.lg-start-zoom .lg-item.lg-complete .lg-object 
 
 /*# sourceMappingURL=lightgallery.css.map */
 
-#lg-zoom-in,
-#lg-zoom-out {
-  /*display: none;*/
-}
-
-#lg-actual-size {
-  display: none;
-}
-
 @media screen and (max-width: 800px) {
 
   .lg-actions .lg-next,
