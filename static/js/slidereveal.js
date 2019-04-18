@@ -11,6 +11,9 @@
   var sidePosition = function($el) {
     var paddingLeft = getPadding($el, 'left');
     var paddingRight = getPadding($el, 'right');
+    
+    //return ($el.width() + paddingLeft + paddingRight) + "px";
+    //changed units from px to vw
     return ($el.width() + paddingLeft + paddingRight)*100/$(window).innerWidth() + "vw";
   };
 
