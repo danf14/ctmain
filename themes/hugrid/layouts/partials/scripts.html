@@ -595,13 +595,14 @@
 				$('.nav-container').removeClass('restore');
 			};
 
-			here();
-
+			here('nav');
+			here('navSlider');
 
 		});
 
 		$(document).ready(function(){
-			here();
+			here('nav');
+			here('navSlider');
 		})
 
 		var hamburger = $('#trigger');
@@ -624,13 +625,13 @@
 		});
 		$('#slider').css('display', 'block');
 		
-		var here = function(){
+		var here = function(navOrNavSlider){
 			var worksHeight = $('#works').innerHeight(),
 				aboutHeight = $('#about').innerHeight(),
 				contactHeight = $('#contact').innerHeight(),
-				worksNav = $('.nav-item:nth-of-type(1)'),
-				aboutNav = $('.nav-item:nth-of-type(2)'),
-				contactNav = $('.nav-item:nth-of-type(3)');
+				worksNav = $('.' + navOrNavSlider + '-item:nth-of-type(1)'),
+				aboutNav = $('.' + navOrNavSlider + '-item:nth-of-type(2)'),
+				contactNav = $('.' + navOrNavSlider + '-item:nth-of-type(3)');
 
 			if($(document).scrollTop() < worksHeight) {
 				if(worksNav.hasClass('here')){
