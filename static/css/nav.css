@@ -3,9 +3,12 @@
     display:block;
     position: fixed;
     top:0;
-	padding: 120px 37px 50px;
-	z-index: 10;
-    transition: ease 250ms all;
+    right: 10vw;
+    left: 10vw;
+	padding: 130px 37px 50px;
+    z-index: 11;
+    transition: background-color 125ms ease;
+    transition: height 250ms ease;
     /*transition: ease 10ms background;
     border-bottom:1px solid #dcdcdc;*/
 }
@@ -19,7 +22,7 @@
 .scrolled .nav-list{top:20px;}
 
 .restore {
-    padding: 60px 37px 50px;
+    padding: 130px 37px 50px;
    /* border-bottom:1px solid #dcdcdc;*/
 }
 
