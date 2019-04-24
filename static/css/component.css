@@ -28,7 +28,8 @@ article.og-grid {
 	/*text-align: justify;*/
 }
 
-.og-grid li {
+.og-grid li,
+.og-grid figure {
 	display: inline-block;
 	margin: 10px 5px 0 5px;
 	vertical-align: top;
@@ -51,21 +52,24 @@ article.og-grid {
 	/*border:1px solid #222;*/
 }
 
-.og-grid li > a,
-.og-grid li > a img {
+.og-grid li a,
+.og-grid figure a,
+.og-grid li a img,
+.og-grid figure a img {
 	/*border: none;
 	outline: none;*/
 	display: block;
 	position: relative;
 }
 
-.og-grid li > a img {
+.og-grid li a img,
+.og-grid figure a img {
 	width:100%;
 	height:auto;
 	/*border: 1px solid #888;*/
 }
 
-.og-grid li.og-expanded > a::after {
+.og-grid li.og-expanded a::after {
 	top: auto;
 	border: solid transparent;
 	content: " ";

@@ -1,0 +1,160 @@
+@font-face {
+    font-family: 'ctmain';
+    src: url('../../fonts/ctmain/fonts/ctmain.eot');
+    src: url('../../fonts/ctmain/fonts/ctmain.eot?#iefix') format('embedded-opentype'),
+         url('../../fonts/ctmain/fonts/ctmain.woff') format('woff'),
+         url('../../fonts/ctmain/fonts/ctmain.ttf') format('truetype'),
+         url('../../fonts/ctmain/fonts/ctmain.svg#ctmain') format('svg');
+    font-weight: normal;
+    font-style: normal;
+  }
+  [class*='icon-']:before{
+  display: inline-block;
+   font-family: 'ctmain';
+   font-style: normal;
+   font-weight: normal;
+   line-height: 1;
+   -webkit-font-smoothing: antialiased;
+   -moz-osx-font-smoothing: grayscale
+  }
+  .icon-un_fullscreen:before{content:'\0041';}
+  .icon-fullscreen:before{content:'\0042';}
+  .icon-close:before{content:'\0043';}
+  .icon-share-solid:before{content:'\0044';}
+  .icon-share-outline:before{content:'\0045';}
+  .icon-up_arrow:before{content:'\0046';}
+  .icon-down_arrow:before{content:'\0047';}
+  .icon-download:before{content:'\0048';}
+  .icon-zoom_out:before{content:'\0049';}
+  .icon-zoom_in:before{content:'\004a';}
+  .icon-right_arrow:before{content:'\004b';}
+  .icon-left_arrow:before{content:'\004c';}
+
+
+.pswp__bg {
+    background: #fff;
+   
+}
+
+figcaption {
+    padding:5px 12px;
+}
+
+.og-grid figcaption h4 {
+    font-weight: 400;
+}
+
+.og-grid figcaption p {
+    margin-bottom: 0;
+    font-size: 12px;
+    font-weight: 300;
+}
+
+.pswp__caption__center,
+.pswp__counter {
+    color:#555;
+    font-family: 'Geomanist';
+}
+
+.pswp__counter {
+    font-size: 18px;
+    top:15px;
+    left:15px;
+}
+
+.pswp__top-bar {
+    height:75px;
+    padding:17px 14px 0;
+}
+
+.pswp__ui--fit .pswp__top-bar, 
+.pswp__ui--fit .pswp__caption {
+    background-color: rgba(255,255,255,.6);
+}
+
+.pswp__caption__center {
+    max-width: none;
+    margin:0;
+    padding: 20px 20px 10px;
+}
+
+.pswp__caption__center h4 {
+    margin: 0;
+    font-size: 32px;
+    font-weight:300;
+    letter-spacing: 2px;
+    line-height: 32px;
+    color: #555;
+}
+
+.pswp__caption__center p {
+    font-size: 16px;
+    margin: 5px 0 0;
+    font-weight:300;
+}
+
+.pswp--svg .pswp__button,
+.pswp--svg .pswp__button--arrow--left:before,
+.pswp--svg .pswp__button--arrow--right:before {
+    font-family: 'ctmain';
+    font-size: 24px;
+    color:#555;
+    background-image: none;
+    background-color: transparent;
+}
+
+.pswp__button--close:after {
+    content:'\0043';
+}
+
+.pswp__button--share:after {
+    content:'\0045';
+}
+
+.pswp__button--fs:after {
+    content:'\0042';
+}
+
+.pswp--fs .pswp__button--fs:after {
+    content:'\0041';
+}
+
+.pswp__button--zoom:after {
+    content:'\004a';
+}
+
+.pswp--zoomed-in .pswp__button--zoom:after {
+    content:'\0049';
+}
+
+.pswp__button.pswp__button--arrow--left:after {
+    content:'\004c';
+}
+
+.pswp__button.pswp__button--arrow--right:after {
+    content:'\004b';
+}
+
+.pswp__button.pswp__button--arrow--left,
+.pswp__button.pswp__button--arrow--right {
+    background-color: rgba(255,255,255,.6);
+}
+
+.pswp__img--placeholder--blank {
+    background: #fff;
+}
+
+.pswp--zoom-allowed .pswp__img {
+    padding: 20px;
+}
+
+@media screen and (max-width: 800px) {
+    .pswp__button.pswp__button--arrow--left,
+    .pswp__button.pswp__button--arrow--right {
+        display: none;
+    }
+
+    figcaption {
+        padding:5px 10px;
+    }
+}
