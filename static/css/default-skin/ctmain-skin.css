@@ -64,6 +64,10 @@ figcaption {
     font-weight: 300;
 }
 
+.pswp__img.pswp__img--placeholder.pswp__img--placeholder--blank {
+    background: url("../../images/evolution2.gif") no-repeat scroll center center transparent;
+}
+
 .pswp__caption__center,
 .pswp__counter {
     color:#555;
@@ -81,8 +85,14 @@ figcaption {
     padding:17px 14px 0;
 }
 
-.pswp__ui--fit .pswp__top-bar, 
+.pswp__ui--fit .pswp__top-bar,
 .pswp__ui--fit .pswp__caption {
+    background-color: transparent;
+    transition: all 500ms ease;
+} 
+
+.pswp--zoomed-in .pswp__ui--fit .pswp__top-bar,
+.pswp--zoomed-in .pswp__ui--fit .pswp__caption {
     background-color: rgba(255,255,255,.6);
 }
 
@@ -159,7 +169,7 @@ figcaption {
 }
 
 .pswp--zoom-allowed .pswp__img {
-    padding: 20px;
+    /*padding: 20px;*/
 }
 
 @media screen and (max-width: 800px) {
