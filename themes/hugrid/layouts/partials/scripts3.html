@@ -175,7 +175,10 @@
                   var $index = $(this).index();
                   var options = {
                       index: $index,
-                      
+                      closeOnScroll: false,
+                      closeOnVerticalDrag: false,
+                      tapToClose: false,
+                      closeElClasses: ['top-bar'],
                       showHideOpacity: true,
                       history:true,
                       galleryPIDs:true
