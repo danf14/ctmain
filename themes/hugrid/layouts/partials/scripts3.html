@@ -164,12 +164,12 @@
 
               var slides = getslides();
 
-              $.each(slides, function(index, value) {
+              /*$.each(slides, function(index, value) {
                   image[index]     = new Image();
                   image[index].src = value['src'];
-              });
+              });*/
 
-              $pic.on('click', 'figure', function(event) {
+              $pic.on('click', 'li', function(event) {
                   event.preventDefault();
                   
                   var $index = $(this).index();
@@ -182,7 +182,7 @@
                       showHideOpacity: true,
                       history:true,
 					  galleryPIDs:true,
-					  preload:[1,1]
+					  //preload:[1,1]
                   }
 
                   var lightBox = new PhotoSwipe($pswp, PhotoSwipeUI_Default, slides, options);
