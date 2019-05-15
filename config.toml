@@ -11,6 +11,8 @@ datadir = "data"
 layoutdir = "layouts"
 publishdir = "public"
 
+enableRobotsTXT = "true"
+
 [params]
     # Meta
     #title = "CT MAIN"
