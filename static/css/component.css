@@ -35,7 +35,7 @@ article.og-grid {
 	vertical-align: top;
 	height: auto;
 
-	/*min-width: calc(100% - 4px);*/
+	min-width: calc(100% - 4px);/**/
 	margin: 10px;
 	background-color: white;
 	/*min-height: 40vh;
