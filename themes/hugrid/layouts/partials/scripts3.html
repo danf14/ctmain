@@ -11,26 +11,28 @@
 <script src="{{ .Site.BaseURL }}js/photoswipe.min.js"></script>
 <script src="{{ .Site.BaseURL }}js/photoswipe-ui-default.min.js"></script>
 <script src="{{ .Site.BaseURL }}js/slidereveal.js"></script>
+<script src="https://hammerjs.github.io/dist/hammer.js"></script>
 <script>
 	
 
 	$(function () {
-		 /*
+
+		hammertime.get('pinch').set({ enable: true });
+
+		var ham = new Hammer( $('.pinch'), {
+			domEvents: true
+		} );
+
+		ham.on( "pinch", function( e ) {
+			$('.lg-link img.lazyload').attr('src', $(this).attr('src').replace('thumbs','med'));
+		});
 		$('.lazy').Lazy({
 			effect: "fadeIn",
             effectTime: 2000,
            threshold: 0
 		});
 */
-		$('.lg-link img.lazyload').on('gestureend', function(e) {
-			if (e.scale < 1.0) {
-				// User moved fingers closer together
-				
-			} else if (e.scale > 1.0) {
-				// User moved fingers further apart
-				$(this).attr('src', $(this).attr('src').replace('thumbs','med'));
-			}
-		});
+
 
 		//window.scrollTo(0,1);
 		$(window).scroll(function () {
