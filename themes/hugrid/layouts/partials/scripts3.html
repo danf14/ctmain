@@ -15,7 +15,28 @@
 	
 
 	$(function () {
+		// split main ul into multiples dependent on width of container
+
+		/*$(window).ready(function(){
+			$.columnLayout = function(){
+				var containerWidth = $('#og-grid').width();
+				console.log(containerWidth);
+				var thumbs = $('#og-grid li');
+				console.log(thumbs.length);
+				var thumbsHeight = 0;
+				thumbs.each(function() {
+					thumbsHeight += $(this).height();
+				});
+
+				console.log(thumbsHeight);
+				console.log(thumbs[thumbs.length/3]);
+				//3 columns:
+				thumbs.eq(thumbs.length/3).before('</ul><ul class="og-grid">');
+				thumbs.eq(2*thumbs.length/3).before('</ul><ul class="og-grid">');
+			}();
 		});
+
+		 
 		$('.lazy').Lazy({
 			effect: "fadeIn",
             effectTime: 2000,
