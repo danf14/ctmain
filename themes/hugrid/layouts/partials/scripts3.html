@@ -43,6 +43,18 @@
            threshold: 0
 		});
 */
+//var currentSrc = $('.lg-link img.lazyload').attr('src');
+
+		$('.lg-link img').on('mouseover', function() {
+
+				/*var currentSrc = $(this).attr('src');
+				console.log(currentSrc);
+				currentSrc.replace('thumbs','med');
+				console.log(currentSrc);*/
+				$(this).attr('src', $(this).attr('src').replace('thumbs','med'));
+				// User moved fingers further apart
+				console.log($(this).attr('src'));
+		});
 
 		$('.lg-link img').on('gestureend', function(e) {
 			if (e.scale < 1.0) {
