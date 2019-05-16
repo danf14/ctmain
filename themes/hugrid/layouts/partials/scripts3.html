@@ -24,7 +24,9 @@
 		} );
 
 		ham.on( "pinch", function( e ) {
-			$('.lg-link img.lazyload').attr('src', $(this).attr('src').replace('thumbs','med'));
+			if (e.scale > 1.0) {
+				$('.lg-link img.lazyload').attr('src', $(this).attr('src').replace('thumbs','med'));
+			}
 		});
 		$('.lazy').Lazy({
 			effect: "fadeIn",
