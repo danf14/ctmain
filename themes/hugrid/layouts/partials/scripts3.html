@@ -11,7 +11,7 @@
 <script src="{{ .Site.BaseURL }}js/photoswipe.min.js"></script>
 <script src="{{ .Site.BaseURL }}js/photoswipe-ui-default.min.js"></script>
 <script src="{{ .Site.BaseURL }}js/slidereveal.js"></script>
-<script src="{{ .Site.BaseURL }}js/pinch-zoom.js"></script>
+<script src="{{ .Site.BaseURL }}js/jquery.touchSwipe.min.js"></script>
 <script>
 	
 
@@ -57,17 +57,11 @@
 				console.log($(this).attr('src'));
 		});
 
-		var myElement = $('.lg-link img');
-		var pz = new PinchZoom.default(myElement, {
-			draggableUnzoomed: false,
-			minZoom: 1,
-			onZoomStart: function(object, event){
-				// Do something on zoom start
-				// You can use any Pinchzoom method by calling object.method()
+		$(".lg-link img").swipe( {
+			pinchIn:function(event, direction, distance, duration, fingerCount, pinchZoom){
 				$(this).attr('src', $(this).attr('src').replace('thumbs','med'));
 			}
 		});
-
 		/*$('.lg-link img').on('gestureend', function(e) {
 			if (e.scale < 1.0) {
 				// User moved fingers closer together
