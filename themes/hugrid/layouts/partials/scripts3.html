@@ -23,14 +23,15 @@
 		});
 */
 
-		$('.lg-link img.lazyload').on('gestureend', function(e) {
+		$('.lg-link img').on('gestureend', function(e) {
 			if (e.scale < 1.0) {
 				// User moved fingers closer together
-				var currentSrc = $(this).attr('src');
+				/*var currentSrc = $(this).attr('src');
 				console.log(currentSrc);
-				currentSrc.split();
+				currentSrc.split();*/
 			} else if (e.scale > 1.0) {
 				// User moved fingers further apart
+				$(this).attr('src', $(this).attr('src').replace('thumbs','med'));
 			}
 		});
 
