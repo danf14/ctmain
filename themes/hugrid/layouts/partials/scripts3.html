@@ -11,6 +11,7 @@
 <script src="{{ .Site.BaseURL }}js/photoswipe.min.js"></script>
 <script src="{{ .Site.BaseURL }}js/photoswipe-ui-default.min.js"></script>
 <script src="{{ .Site.BaseURL }}js/slidereveal.js"></script>
+<script src="{{ .Site.BaseURL }}js/jquery.touchSwipe.min.js"></script>
 <script>
 	
 
@@ -50,23 +51,28 @@
 				/*var currentSrc = $(this).attr('src');
 				console.log(currentSrc);
 				currentSrc.replace('thumbs','med');
-				console.log(currentSrc);*/
+				console.log(currentSrc);
 				$(this).attr('src', $(this).attr('src').replace('thumbs','med'));
 				// User moved fingers further apart
-				console.log($(this).attr('src'));
+				console.log($(this).attr('src'));*/
 		});
 
-		$('.lg-link img').on('gestureend', function(e) {
+		$(function() {      
+			$(".lg-link img").swipe( {
+				pinchIn:function(event, direction, distance, duration, fingerCount, pinchZoom){
+					$(this).attr('src', $(this).attr('src').replace('thumbs','med'));
+				}
+			});
+		});
+		/*$('.lg-link img').on('gestureend', function(e) {
 			if (e.scale < 1.0) {
 				// User moved fingers closer together
-				/*var currentSrc = $(this).attr('src');
-				console.log(currentSrc);
-				currentSrc.split();*/
+
 			} else if (e.scale > 1.0) {
 				// User moved fingers further apart
 				$(this).attr('src', $(this).attr('src').replace('thumbs',''));
 			}
-		});
+		});*/
 
 		//window.scrollTo(0,1);
 		$(window).scroll(function () {
