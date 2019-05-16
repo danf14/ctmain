@@ -22,6 +22,16 @@
            threshold: 0
 		});
 */
+		$('.lg-link img.lazyload').on('gestureend', function(e) {
+			if (e.scale < 1.0) {
+				// User moved fingers closer together
+				
+			} else if (e.scale > 1.0) {
+				// User moved fingers further apart
+				$(this).attr('src', $(this).attr('src').replace('thumbs','med'));
+			}
+		});
+
 		//window.scrollTo(0,1);
 		$(window).scroll(function () {
             scrolled();
