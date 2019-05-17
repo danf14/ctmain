@@ -46,18 +46,20 @@
 */
 //var currentSrc = $('.lg-link img.lazyload').attr('src');
 
-		$('.lg-link img').on('mouseover', function() {
+		/*$('.pinch').on('mouseover', function() {
 
-				/*var currentSrc = $(this).attr('src');
+				var currentSrc = $(this).attr('src');
 				console.log(currentSrc);
 				currentSrc.replace('thumbs','med');
-				console.log(currentSrc);*/
-				$(this).attr('src', $(this).attr('src').replace('thumbs','med'));
+				console.log(currentSrc);
+				$(this).find('img').attr('src', $(this).find('img').attr('src').replace('thumbs','med'));
 				// User moved fingers further apart
-				console.log($(this).attr('src'));
-		});
+				console.log($(this).find('img').attr('src'));
+		});*/
 
-		$(".lg-link img").swipe( {
+		//console.log($(".pinch").find('img'));
+
+		$(".pinch").swipe( {
 			pinchIn:function(event, direction, distance, duration, fingerCount, pinchZoom){
 				$(this).attr('src', $(this).attr('src').replace('thumbs','med'));
 			}
