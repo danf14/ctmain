@@ -23,7 +23,7 @@
 					 data-dimensions="{{.dimensions }}" data-buttontext="{{.buttontext}}">
 						<img class="lazy" src="{{.thumb}}" data-retina="{{.retinaThumb}}" alt="{{.alt}}" />
 					</a>-->
-					<li itemprop="associatedMedia" itemscope itemtype="http://schema.org/ImageObject">
+					<li class="pinch" itemprop="associatedMedia" itemscope itemtype="http://schema.org/ImageObject">
 						<a class="lg-link" href="images/med/{{.image}}" data-size="{{.imageSize}}" itemprop="contentUrl" alt="{{.title}}">
 							<img class="lazyload" src="images/micro/{{.image}}" data-src="images/thumbs/{{.image}}" itemprop="thumbnail" data-retina="{{.retinaThumb}}" alt="{{.alt}}" />
 						</a>
