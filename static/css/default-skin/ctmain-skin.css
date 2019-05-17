@@ -172,6 +172,10 @@ figcaption {
     /*padding: 20px;*/
 }
 
+.pswp__caption__center .zoomInstruction{
+    display:none;
+}
+
 @media screen and (max-width: 800px) {
     .pswp__button.pswp__button--arrow--left,
     .pswp__button.pswp__button--arrow--right {
