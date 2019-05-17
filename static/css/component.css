@@ -69,6 +69,8 @@ article.og-grid {
 	/*border: 1px solid #888;*/
 }
 
+img[data-sizes="auto"] { display: block; width: 100%; }
+
 .og-grid .zoomInstruction{
 	text-align:right;
 }
