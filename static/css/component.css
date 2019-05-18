@@ -73,6 +73,7 @@ img[data-sizes="auto"] { display: block; width: 100%; }
 
 .og-grid .zoomInstruction{
 	text-align:right;
+	margin-top:15px;
 }
 
 .og-loading {
