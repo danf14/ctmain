@@ -31,19 +31,19 @@ article.og-grid {
 .og-grid li,
 .og-grid figure {
 	display: inline-block;
-	margin: 10px 5px 0 5px;
+	/*margin: 10px 5px 0 5px;*/
 	vertical-align: top;
 	height: auto;
 
-	min-width: calc(100% - 4px);/**/
-	margin: 10px;
+	min-width: calc(100% - 4px);
+	/*margin: 10px;*/
 	background-color: white;
 	/*min-height: 40vh;
 	min-height: 28vh;*/
 	display: inline-block;
 	position: relative;
 	/*box-shadow: 0 1px 3px 0 rgba(0, 0, 0, .2), 0 1px 1px 0 rgba(0, 0, 0, .14), 0 2px 1px -1px rgba(0, 0, 0, .12);*/
-	padding: 20px;
+	padding: 25px;
 	box-sizing: border-box;
 	/*border-radius: 3px;*/
 	-webkit-column-break-inside: avoid;
