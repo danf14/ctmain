@@ -148,6 +148,7 @@ a {
 
 #works.container > header h1 {
 	display: block;
+	margin-right: -10px;
 	opacity: 1;
 	font-size: 5vh;
 	text-transform: uppercase;
