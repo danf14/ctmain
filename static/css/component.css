@@ -83,7 +83,7 @@ img[data-sizes="auto"] { display: block; width: 100%; }
 	top: 50%;
 	left: 50%;
 	transform: translate( -50%, -50%);
-	background: url(../images/evolution2.gif) no-repeat;
+	background: url(../images/evolution2a.gif) no-repeat;
 }
 
 @media screen and (max-width: 830px) {
