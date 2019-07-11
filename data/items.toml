@@ -205,7 +205,15 @@ dimensions = "40cm X 40cm"
 url = "#"
 
 
-
+[[items]]
+title = "Papaver Radicatum - Aftershock, 2019"
+image = "ct-main-artist-im-a-alien.jpg"
+imageSize = "1200x2904"
+thumb = "images/thumbs/CTMAIN-51809.jpg"
+alt = "CT Main | Artist | Creeping Blast, 2018"
+description = "acrylic & ink on board" 
+dimensions = "90cm X 200cm"
+url = "#"
 
 
 [[about]]
