@@ -17,11 +17,10 @@ enableRobotsTXT = "true"
     # Meta
     #title = "C.T. MAIN"
     #subtitle = ""
-    title = "C.T. MAIN"
     author = "Daniel Fraser"
-    #description = "C. T. Main is a recently discovered “outsider artist” who grew up in Wales and the North East of England. Through his unique visual language, C.T. introduces us, with acerbic wit, to a ghastly yet beguiling panoply of the living and the dead; mortal and Minotaur."
+    description = "C. T. Main is a recently discovered “outsider artist” who grew up in Wales and the North East of England. Through his unique visual language, C.T. introduces us, with acerbic wit, to a ghastly yet beguiling panoply of the living and the dead; mortal and Minotaur."
     #keywords = ""
-    #image = "https://ctmain.co.uk/images/websiteImage.jpg"
+    image = "https://ctmain.co.uk/images/websiteImage.jpg"
 
     # Body background color
     # bodybgcolor = "#f9f9f9"
