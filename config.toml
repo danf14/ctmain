@@ -1,7 +1,7 @@
 # Site settings
 baseurl = "/"
 languageCode = "en-us"
-title = "C.T. MAIN"
+title = "C.T. MAIN | Artist"
 theme = "hugrid"
 # Enter your tracking code to enable Google Analytics
 googleAnalytics = "UA-140212719-1"
@@ -16,11 +16,12 @@ enableRobotsTXT = "true"
 [params]
     # Meta
     #title = "C.T. MAIN"
-    #subtitle = "A kind of boilerplate to perform anyone or anything quickly. Portfolio, collection, bookmarks, contacts and so on."
+    #subtitle = ""
     title = "C.T. MAIN"
     author = "Daniel Fraser"
-    #description = "Hugrid - grid theme for Hugo with an expanding image preview."
-    #keywords = "Hugo, Hugo theme, grid theme, portfolio, bookmarks, collection, contacts"
+    #description = "C. T. Main is a recently discovered “outsider artist” who grew up in Wales and the North East of England. Through his unique visual language, C.T. introduces us, with acerbic wit, to a ghastly yet beguiling panoply of the living and the dead; mortal and Minotaur."
+    #keywords = ""
+    #image = "https://ctmain.co.uk/images/websiteImage.jpg"
 
     # Body background color
     # bodybgcolor = "#f9f9f9"
