@@ -198,7 +198,8 @@
                               $size   = $(this).data('size').split('x'),
                               $width  = $size[0],
                               $height = $size[1],
-                              $title = $(this).next().html();
+                              $title = $(this).next().html(),
+							  $pid = $(this > 'img').data('url');
 
                           var slide = {
                               src : $href,
@@ -206,7 +207,7 @@
                               w   : $width,
                               h   : $height,
                               title : $title,
-                              //pid : $title
+                              pid : $pid
                           }
 
                           slides.push(slide);
