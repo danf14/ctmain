@@ -199,7 +199,7 @@
                               $width  = $size[0],
                               $height = $size[1],
                               $title = $(this).next().html(),
-							  $pid = $(this > 'img').data('url');
+							  $pid = $(this > 'img').data('url').substring(-4);
 
                           var slide = {
                               src : $href,
@@ -213,6 +213,7 @@
                           slides.push(slide);
                       });
                       return slides;
+					  console.log($pid);
                   }
 
               var slides = getslides();
