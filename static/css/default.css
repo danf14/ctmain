@@ -220,8 +220,8 @@ footer{
 
 .nav-item .icon-instagram,
 .nav-item .icon-saatchi,
-.navSlider-item .icon-instagram,
-.navSlider-item .icon-saatchi{
+.navSlider-item a.icon-instagram,
+.navSlider-item a.icon-saatchi{
 	font-size: 24px;
 	display: none;
 }
