@@ -183,7 +183,7 @@
 				});
 			});
 
-			initItemsEvents($newitems);
+			//initItemsEvents($newitems);
 
 		}
 
@@ -199,7 +199,7 @@
 
 		function initEvents() {
 
-			initItemsEvents($items);
+			//initItemsEvents($items);
 
 			$window.on('debouncedresize', function () {
 
@@ -227,7 +227,7 @@
 				return false;
 
 			});
-		}*/
+		}
 
 		function initItemsEvents($items) {
 			$items.on('click', '.closeIcon', function () {
@@ -240,7 +240,7 @@
 				return false;
 
 			});
-		}
+		}*/
 
 		function getWinSize() {
 			winsize = { width: $window.width(), height: $window.height() };
@@ -655,6 +655,104 @@
 				contactNav.removeClass('here');
 			}
 		}
+
+		/*var imgArray = [
+				{{ range $.Site.Data.items.items }}
+			{
+				
+				'src': '{{.image}}',
+				'thumb': '{{.thumb}}',
+				'subHtml': '<h4>{{.title}}</h4><p>{{.description}}</p><p>{{.dimensions}}</p>'
+				
+			},
+			{{ end }}
+		];*/
+
+		$('a.lg-link').on('click', function(){
+			$('img.lazy').lightGallery({
+			//index: current,
+			hideBarsDelay: 3000,
+			fullScreen: true,
+			dynamic: true,
+			actualSize: false,
+			googlePlus: false,
+			dynamicEl: [{
+										'src': 'images/med/CTMAIN-51743.jpg',
+										'thumb': 'images/thumbs/CTMAIN-51743.jpg',
+										'subHtml': '<h4>Title, Year</h4><p>C-type gloss print on aluminium, framed in a walnut tray frame.</p><p>180 x 120cm, Edition 1 of 2 & 2 AP</p>'
+									}, {
+										'src': 'images/med/CTMAIN-51751.jpg',
+										'thumb': 'images/thumbs/CTMAIN-51751.jpg',
+										'subHtml': '<h4>Title, Year</h4><p>C-type gloss print on aluminium, framed in a walnut tray frame.</p><p>180 x 120cm, Edition 1 of 2 & 2 AP</p>'
+									}, {
+										'src': 'images/med/CTMAIN-51758.jpg',
+										'thumb': 'images/thumbs/CTMAIN-51758.jpg',
+										'subHtml': '<h4>Title, Year</h4><p>C-type gloss print on aluminium, framed in a walnut tray frame.</p><p>180 x 120cm, Edition 1 of 2 & 2 AP</p>'
+									}, {
+										'src': 'images/med/CTMAIN-51773.jpg',
+										'thumb': 'images/thumbs/CTMAIN-51773.jpg',
+										'subHtml': '<h4>Title, Year</h4><p>C-type gloss print on aluminium, framed in a walnut tray frame.</p><p>180 x 120cm, Edition 1 of 2 & 2 AP</p>'
+									}, {
+										'src': 'images/med/CTMAIN-51776.jpg',
+										'thumb': 'images/thumbs/CTMAIN-51776.jpg',
+										'subHtml': '<h4>Title, Year</h4><p>C-type gloss print on aluminium, framed in a walnut tray frame.</p><p>180 x 120cm, Edition 1 of 2 & 2 AP</p>'
+									}, {
+										'src': 'images/med/CTMAIN-51782.jpg',
+										'thumb': 'images/thumbs/CTMAIN-51782.jpg',
+										'subHtml': '<h4>Title, Year</h4><p>C-type gloss print on aluminium, framed in a walnut tray frame.</p><p>180 x 120cm, Edition 1 of 2 & 2 AP</p>'
+									}, {
+										'src': 'images/med/CTMAIN-51787.jpg',
+										'thumb': 'images/thumbs/CTMAIN-51787.jpg',
+										'subHtml': '<h4>Title, Year</h4><p>C-type gloss print on aluminium, framed in a walnut tray frame.</p><p>180 x 120cm, Edition 1 of 2 & 2 AP</p>'
+									}, {
+										'src': 'images/med/CTMAIN-51792.jpg',
+										'thumb': 'images/thumbs/CTMAIN-51792.jpg',
+										'subHtml': '<h4>Title, Year</h4><p>C-type gloss print on aluminium, framed in a walnut tray frame.</p><p>180 x 120cm, Edition 1 of 2 & 2 AP</p>'
+									}, {
+										'src': 'images/med/CTMAIN-51799.jpg',
+										'thumb': 'images/thumbs/CTMAIN-51799.jpg',
+										'subHtml': '<h4>Title, Year</h4><p>C-type gloss print on aluminium, framed in a walnut tray frame.</p><p>180 x 120cm, Edition 1 of 2 & 2 AP</p>'
+									}, {
+										'src': 'images/med/CTMAIN-51801.jpg',
+										'thumb': 'images/thumbs/CTMAIN-51801.jpg',
+										'subHtml': '<h4>Title, Year</h4><p>C-type gloss print on aluminium, framed in a walnut tray frame.</p><p>180 x 120cm, Edition 1 of 2 & 2 AP</p>'
+									}, {
+										'src': 'images/med/CTMAIN-51807.jpg',
+										'thumb': 'images/thumbs/CTMAIN-51807.jpg',
+										'subHtml': '<h4>Title, Year</h4><p>C-type gloss print on aluminium, framed in a walnut tray frame.</p><p>180 x 120cm, Edition 1 of 2 & 2 AP</p>'
+									}, {
+										'src': 'images/med/CTMAIN-51809.jpg',
+										'thumb': 'images/thumbs/CTMAIN-51809.jpg',
+										'subHtml': '<h4>Title, Year</h4><p>C-type gloss print on aluminium, framed in a walnut tray frame.</p><p>180 x 120cm, Edition 1 of 2 & 2 AP</p>'
+									}, {
+										'src': 'images/med/CTMAIN-51812.jpg',
+										'thumb': 'images/thumbs/CTMAIN-51812.jpg',
+										'subHtml': '<h4>Title, Year</h4><p>C-type gloss print on aluminium, framed in a walnut tray frame.</p><p>180 x 120cm, Edition 1 of 2 & 2 AP</p>'
+									}, {
+										'src': 'images/med/CTMAIN-51825.jpg',
+										'thumb': 'images/thumbs/CTMAIN-51825.jpg',
+										'subHtml': '<h4>Title, Year</h4><p>C-type gloss print on aluminium, framed in a walnut tray frame.</p><p>180 x 120cm, Edition 1 of 2 & 2 AP</p>'
+									}, {
+										'src': 'images/med/CTMAIN-51831.jpg',
+										'thumb': 'images/thumbs/CTMAIN-51831.jpg',
+										'subHtml': '<h4>Title, Year</h4><p>C-type gloss print on aluminium, framed in a walnut tray frame.</p><p>180 x 120cm, Edition 1 of 2 & 2 AP</p>'
+									}, {
+										'src': 'images/med/CTMAIN-51836.jpg',
+										'thumb': 'images/thumbs/CTMAIN-51836.jpg',
+										'subHtml': '<h4>Title, Year</h4><p>C-type gloss print on aluminium, framed in a walnut tray frame.</p><p>180 x 120cm, Edition 1 of 2 & 2 AP</p>'
+									}, {
+										'src': 'images/med/CTMAIN-51839.jpg',
+										'thumb': 'images/thumbs/CTMAIN-51839.jpg',
+										'subHtml': '<h4>Title, Year</h4><p>C-type gloss print on aluminium, framed in a walnut tray frame.</p><p>180 x 120cm, Edition 1 of 2 & 2 AP</p>'
+									}, {
+										'src': 'images/med/CTMAIN-51865.jpg',
+										'thumb': 'images/thumbs/CTMAIN-51865.jpg',
+										'subHtml': '<h4>Title, Year</h4><p>C-type gloss print on aluminium, framed in a walnut tray frame.</p><p>180 x 120cm, Edition 1 of 2 & 2 AP</p>'
+									}]
+		})
+
+		})
+		
 	});
 
 </script>

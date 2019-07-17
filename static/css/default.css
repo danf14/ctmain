@@ -216,6 +216,8 @@ footer{
 .nav-item .icon-instagram,
 .nav-item .icon-saatchi{
 	margin-top: -2px;
+/*=== remove the below when reinstating ===*/
+	margin-right: 0;
 }
 
 #slider .navSlider-container .navSlider-item a.icon-instagram,
