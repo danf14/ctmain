@@ -189,7 +189,7 @@ a {
 	padding: 50px 20px;
 }
 
-
+/*
 footer{
 	width: 80vw;
     height: 60px;
@@ -201,14 +201,29 @@ footer{
     padding-top: 14px;
 	text-align: right;
 	font-family: 'ctmain';
+	font-size: 24px;
 }
-
+*/
 .icon-instagram,
 .icon-saatchi{
-	width: 32px;
-    height: 32px;
+	width: 24px;
+    height: 24px;
 	display: inline-block;
 	color:#888;
+}
+
+
+.nav-item .icon-instagram,
+.nav-item .icon-saatchi{
+	margin-top: -2px;
+}
+
+.nav-item .icon-instagram,
+.nav-item .icon-saatchi,
+.navSlider-item .icon-instagram,
+.navSlider-item .icon-saatchi{
+	font-size: 24px;
+	display: none;
 }
 
 .icon-instagram:before{content:'\004d';}
