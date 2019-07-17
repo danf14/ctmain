@@ -1,5 +1,22 @@
-@import url(//fonts.googleapis.com/css?family=Lato:300,400,700);
-/* General Demo Style */
+@font-face {
+    font-family: 'ctmain';
+    src: url('../../fonts/ctmain/fonts/ctmain.eot');
+    src: url('../../fonts/ctmain/fonts/ctmain.eot?#iefix') format('embedded-opentype'),
+         url('../../fonts/ctmain/fonts/ctmain.woff') format('woff'),
+         url('../../fonts/ctmain/fonts/ctmain.ttf') format('truetype'),
+         url('../../fonts/ctmain/fonts/ctmain.svg#ctmain') format('svg');
+    font-weight: normal;
+    font-style: normal;
+  }
+  [class*='icon-']:before{
+  display: inline-block;
+   font-family: 'ctmain';
+   font-style: normal;
+   font-weight: normal;
+   line-height: 1;
+   -webkit-font-smoothing: antialiased;
+   -moz-osx-font-smoothing: grayscale
+  }
 
 /* fixes iOS safari bottom toolbar to always show */
 @media screen and (max-width:767px) {
@@ -171,3 +188,28 @@ a {
 	text-align: center;
 	padding: 50px 20px;
 }
+
+
+footer{
+	width: 80vw;
+    height: 60px;
+    position: fixed;
+    right: 10vw;
+    left: 10vw;
+    bottom: 0;
+    background-color: #fff;
+    padding-top: 14px;
+	text-align: right;
+	font-family: 'ctmain';
+}
+
+.icon-instagram,
+.icon-saatchi{
+	width: 32px;
+    height: 32px;
+	display: inline-block;
+	color:#888;
+}
+
+.icon-instagram:before{content:'\004d';}
+.icon-saatchi:before{content:'\004e';}
