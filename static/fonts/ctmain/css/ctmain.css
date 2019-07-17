@@ -18,7 +18,7 @@
    -webkit-font-smoothing: antialiased;
    -moz-osx-font-smoothing: grayscale
 }
-.icon-download:before{content:'\0041';}
+.icon-un_fullscreen:before{content:'\0041';}
 .icon-fullscreen:before{content:'\0042';}
 .icon-close:before{content:'\0043';}
 .icon-share-solid:before{content:'\0044';}
@@ -28,3 +28,7 @@
 .icon-download:before{content:'\0048';}
 .icon-zoom_out:before{content:'\0049';}
 .icon-zoom_in:before{content:'\004a';}
+.icon-right_arrow:before{content:'\004b';}
+.icon-left_arrow:before{content:'\004c';}
+.icon-instagram:before{content:'\004d';}
+.icon-saatchi:before{content:'\004e';}
