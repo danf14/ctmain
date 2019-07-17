@@ -218,6 +218,12 @@ footer{
 	margin-top: -2px;
 }
 
+#slider .navSlider-container .navSlider-item a.icon-instagram,
+#slider .navSlider-container .navSlider-item a.icon-saatchi{
+	height: auto;
+    padding: 16px 20px;
+}
+
 .nav-item .icon-instagram,
 .nav-item .icon-saatchi,
 #slider .navSlider-container .navSlider-item a.icon-instagram,
