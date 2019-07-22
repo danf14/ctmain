@@ -33,3 +33,5 @@ enableRobotsTXT = "true"
 
     # add extra-css
     # custom_css = ['css/extra1.css', 'css/extra2.css']
+
+[taxonomies]
