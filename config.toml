@@ -1,5 +1,5 @@
 # Site settings
-baseurl = "https://ctmain.co.uk"
+baseurl = "https://ctmain.co.uk/"
 languageCode = "en-us"
 title = "C.T. MAIN | Artist"
 theme = "hugrid"
