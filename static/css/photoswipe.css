@@ -182,3 +182,7 @@
   .pswp__caption h4{
     text-decoration: line-through;
   }
+
+  .pswp__caption h4.newTitle{
+    text-decoration: none;
+  }
