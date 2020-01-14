@@ -177,3 +177,8 @@
 .pswp__error-msg a {
   color: #CCC;
   text-decoration: underline; }
+
+
+  .pswp__caption h4{
+    text-decoration: line-through;
+  }
