@@ -196,6 +196,22 @@ a {
 	padding: 50px 20px;
 }
 
+#documentary img.documentary{
+
+}
+
+@media (max-width: 1440px) {
+	#documentary img.documentary{
+		width: 217.5%;
+	}
+}
+
+@media (max-width: 899px) {
+	#documentary img.documentary{
+		width: 100%;
+	}
+}
+
 /*
 footer{
 	width: 80vw;
