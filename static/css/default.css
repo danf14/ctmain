@@ -19,7 +19,7 @@
   }
 
 /* fixes iOS safari bottom toolbar to always show */
-@media screen and (max-width:767px) {
+@media screen and (max-width:899px) {
 	html,
 	body {
 		/* Allows content to fill the viewport and go beyond the bottom */
@@ -33,7 +33,7 @@
 	}
 }
 /*
-@media screen and (min-width: 320px) and (max-width: 767px) and (orientation: landscape) {
+@media screen and (min-width: 320px) and (max-width: 899px) and (orientation: landscape) {
 	html {
 	  transform: rotate(90deg);
 	  transform-origin: left top;
@@ -130,6 +130,13 @@ a {
 
 	padding: 60px 37px 50px;
 	/*text-align: center;*/
+}
+
+@media (max-width: 899px) {
+	.container > header {
+		padding-right: 0;
+		padding-left: 0;
+	}
 }
 
 .container > header h1 {

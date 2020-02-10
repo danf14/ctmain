@@ -184,10 +184,16 @@
 }
 
   
-@media screen and (max-width:767px) {
+@media screen and (max-width:899px) {
     .nav-container {  
         display:none;
     }
+    .nav-container,
+    .scrolled,
+    .restore {
+        padding-right: 0;
+        padding-left: 0;
+    }  
     #slider .navSlider-container,
     #trigger {  
         display:block;

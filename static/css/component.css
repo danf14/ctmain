@@ -23,6 +23,13 @@ article.og-grid {
 	padding: 60px 37px 50px;
 }
 
+@media (max-width: 899px) {
+	article.og-grid {
+		padding-right: 0;
+		padding-left: 0;
+	}
+}
+
 .og-grid p {
 	margin-bottom:50px;
 	/*text-align: justify;*/
